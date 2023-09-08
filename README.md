@@ -18,4 +18,4 @@ To view the project locally or make modifications, follow these steps:
 1. **Clone the Repository:** Clone this repository to your local machine using Git.
 
    ```bash
-   git clone https://github.com/your-username/3-Column-Preview-Card-Component
+   git clone https://github.com/obsidian-scripter/3-Column-Preview-Component.git

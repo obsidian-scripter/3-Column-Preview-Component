@@ -102,8 +102,12 @@ main{
     border-radius: 0.5rem 0.5rem 0 0;
 }
 
+.card:first-child > a {
+    color: var(--bright-orange);
+}
+
 .card:first-child > h1::before {
-    content: url('3-Column-Preview-Component/images/icon-sedans.svg');
+    content: url('/images/icon-sedans.svg');
 }
 
 .card:nth-child(2n) {
@@ -112,7 +116,11 @@ main{
 }
 
 .card:nth-child(2n) > h1::before{
-    content: url('3-Column-Preview-Component/images/icon-luxury.svg');
+    content: url('/images/icon-luxury.svg');
+}
+
+.card:nth-child(2n) > a {
+    color: var(--dark-cyan);
 }
 
 .card:last-child {
@@ -121,8 +129,12 @@ main{
     border-radius: 0 0 0.5rem 0.5rem;
 }
 
+.card:last-child > a {
+    color: var(--ddark-cyan);
+}
+
 .card:last-child > h1::before {
-    content: url('3-Column-Preview-Component/images/icon-suvs.svg')
+    content: url('/images/icon-suvs.svg');
 }
 
 .card > h1 {
@@ -140,6 +152,7 @@ main{
     width: -webkit-fit-content;
     width: -moz-fit-content;
     width: fit-content;
+    text-decoration: none;
 }
 
 .card > a:hover {
