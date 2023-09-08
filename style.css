@@ -107,7 +107,7 @@ main{
 }
 
 .card:first-child > h1::before {
-    content: url('/images/icon-sedans.svg');
+    content: url('./images/icon-sedans.svg');
 }
 
 .card:nth-child(2n) {
@@ -116,7 +116,7 @@ main{
 }
 
 .card:nth-child(2n) > h1::before{
-    content: url('/images/icon-luxury.svg');
+    content: url('./images/icon-luxury.svg');
 }
 
 .card:nth-child(2n) > a {
@@ -134,7 +134,7 @@ main{
 }
 
 .card:last-child > h1::before {
-    content: url('/images/icon-suvs.svg');
+    content: url('./images/icon-suvs.svg');
 }
 
 .card > h1 {
