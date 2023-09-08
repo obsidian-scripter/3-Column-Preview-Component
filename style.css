@@ -1,0 +1,177 @@
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap');
+
+:root {
+    /* Primary */
+
+    --bright-orange: hsl(31, 77%, 52%);
+    --dark-cyan: hsl(184, 100%, 22%);
+    --ddark-cyan: hsl(179, 100%, 13%);
+
+    /* Neutral */
+
+    --t-white: hsla(0, 0%, 100%, 0.75);
+    --light-grey: hsl(0, 0%, 95%);
+
+    /* Font */
+    --fs: 15px;
+    --ff-h: 'Big Shoulders Display', cursive, sans-serif;
+    --ff: 'Lexend Deca', cursive, sans-serif;
+}
+
+/* ==== CSS RESET ==== */
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    min-height: 100vh;
+    font-family: var(--ff);
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+    background-color: var(--t-white);
+    display: grid;
+    place-items: center;
+    font-size: var(--fs);
+    color: var(--t-white);
+}
+
+img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+}
+
+input, button, textarea, select {
+    font: inherit;
+}
+
+p, h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word;
+}
+
+#root, #__next {
+    isolation: isolate;
+}
+
+main{
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* ==== CSS RESET END ==== */
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    width: 90%;
+    border-radius: 2rem;
+    margin: 3rem 0;
+    justify-content: center;
+    align-items: center;
+}
+
+.card {
+    padding: 3.2rem;
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 2rem;
+    flex-basis: min(100%, 375px);
+}
+
+.card > p {
+    color: var(--t-white);
+}
+
+.card > h1::before {
+    display: block;
+    margin-bottom: 1rem;
+}
+
+.card:first-child {
+    background-color: var(--bright-orange);
+    color: var(--bright-orange);
+    border-radius: 0.5rem 0.5rem 0 0;
+}
+
+.card:first-child > h1::before {
+    content: url('/images/icon-sedans.svg');
+}
+
+.card:nth-child(2n) {
+    background-color: var(--dark-cyan);
+    color: var(--dark-cyan);
+}
+
+.card:nth-child(2n) > h1::before{
+    content: url('/images/icon-luxury.svg');
+}
+
+.card:last-child {
+    background-color: var(--ddark-cyan);
+    color: var(--ddark-cyan);
+    border-radius: 0 0 0.5rem 0.5rem;
+}
+
+.card:last-child > h1::before {
+    content: url('/images/icon-suvs.svg')
+}
+
+.card > h1 {
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    font-family: var(--ff-h);
+    color: var(--light-grey);
+}
+
+.card > a {
+    background-color: var(--light-grey);
+    padding: 0.75rem 1.75rem;
+    border-radius: 2rem;
+    border: 2px solid var(--light-grey);
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+}
+
+.card > a:hover {
+    -webkit-background-clip: text;
+            background-clip: text;
+    color: var(--light-grey);
+}
+
+@media(min-width: 768px) {
+
+    .container {
+        align-items: stretch;
+    }
+
+    .card {
+        flex-basis: min(20%, 350px);
+        padding: 3.2rem 2.15rem;
+    }
+
+    .card:first-child {
+        border-radius: 0.5rem 0 0 0.5rem;
+    }
+
+    .card:last-child {
+        border-radius: 0 0.5rem 0.5rem 0;
+    }
+
+    .card > p {
+        width: 90%;
+    }
+
+    .card > a {
+        margin-top: 2.5rem;
+    }
+}
