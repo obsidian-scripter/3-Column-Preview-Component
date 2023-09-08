@@ -168,8 +168,12 @@ main{
     }
 
     .card {
-        flex-basis: min(20%, 350px);
-        padding: 3.2rem 2.15rem;
+        flex-basis: min(25%, 375px);
+        padding: 3.2rem 2.25rem;
+    }
+
+    .card > p {
+        width: 77%;
     }
 
     .card:first-child {
@@ -178,10 +182,6 @@ main{
 
     .card:last-child {
         border-radius: 0 0.5rem 0.5rem 0;
-    }
-
-    .card > p {
-        width: 90%;
     }
 
     .card > a {
